@@ -1,0 +1,152 @@
+:root {
+    --bg-pagina: #f4f4f4;
+    --cor-destaque: #212529;
+    --cor-placeholder: #adb5bd;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 76px;
+}
+
+body {
+    background-color: var(--bg-pagina);
+    color: var(--cor-destaque);
+}
+
+.perfil-wrapper {
+    width: 100%;
+    max-width: 280px; 
+}
+
+.foto-perfil {
+    width: 100%;
+    aspect-ratio: 1 / 1;       
+    object-fit: cover;        
+    object-position: 50% 82%;    
+    border-radius: 24px;         
+    border: 4px solid #ffffff;    
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12); 
+    display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.foto-perfil:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.16);
+}
+
+/* Tamanho maior em telas de tablet/desktop */
+@media (min-width: 992px) {
+    .perfil-wrapper {
+        max-width: 350px;
+    }
+}
+
+.badge-numero {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+    border: 2px solid var(--cor-destaque);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.projeto-thumb-wrapper {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid #dee2e6;
+}
+
+@media (min-width: 768px) {
+    .projeto-thumb-wrapper {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+.projeto-thumb-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.projeto-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(33, 37, 41, 0.55);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.projeto-thumb-wrapper:hover img {
+    transform: scale(1.08);
+}
+
+.projeto-thumb-wrapper:hover .projeto-overlay {
+    opacity: 1;
+}
+
+.modal-img-preview {
+    max-height: 320px;
+    object-fit: cover;
+}
+
+.img-escala-maior {
+    width: 100%;
+    max-height: 75vh;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+.modal-nav-btn {
+    width: 48px;
+    opacity: 1;
+}
+
+.modal-nav-circle {
+    width: 38px;
+    height: 38px;
+    background-color: rgba(33, 37, 41, 0.85);
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.modal-nav-btn:hover .modal-nav-circle {
+    background-color: #000000;
+    transform: scale(1.08);
+}
+
+@media (min-width: 768px) {
+    .foto-placeholder {
+        width: 130px;
+        height: 130px;
+    }
+}
+
+.social-btn {
+    width: 38px;
+    height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
